@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_services_fragment_graph"
+    app:startDestination="@id/myServicesFragment2">
+
+    <fragment
+        android:id="@+id/myServicesFragment2"
+        android:name="com.dasonick.beautymodelapp.ui.main.my_services.MyServicesFragment"
+        android:label="my_services_fragment"
+        tools:layout="@layout/my_services_fragment" >
+        <action
+            android:id="@+id/action_myServicesFragment2_to_serviceItemFragment2"
+            app:destination="@id/serviceItemFragment2" />
+        <action
+            android:id="@+id/action_myServicesFragment2_to_newServiceFragment"
+            app:destination="@id/newServiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceItemFragment2"
+        android:name="com.dasonick.beautymodelapp.ui.service_item.ServiceItemFragment"
+        android:label="service_item_fragment"
+        tools:layout="@layout/service_item_fragment" />
+    <fragment
+        android:id="@+id/newServiceFragment"
+        android:name="com.dasonick.beautymodelapp.ui.new_service.NewServiceFragment"
+        android:label="new_fragment"
+        tools:layout="@layout/new_fragment" >
+        <action
+            android:id="@+id/action_newServiceFragment_to_myServicesFragment2"
+            app:destination="@id/myServicesFragment2" />
+    </fragment>
+</navigation>
